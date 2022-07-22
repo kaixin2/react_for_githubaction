@@ -18,7 +18,7 @@ jobs:
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with: 
-        ACCESS_TOKEN: ${{ secrets.react_for_githubaction_token }}
+        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN}}
         BRANCH: main
         FOLDER: build
         BUILD_SCRIPT: npm install && npm run build
