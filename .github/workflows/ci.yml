@@ -21,7 +21,8 @@ jobs:
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with: 
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}   /* 注意：这行是新加的 */
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN}}
-        BRANCH: main
+        BRANCH: gh-pages
         FOLDER: build
         BUILD_SCRIPT: npm install && npm run build
